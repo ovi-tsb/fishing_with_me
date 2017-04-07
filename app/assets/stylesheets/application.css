@@ -1,15 +1,158 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+body {
+  margin: 0;
+  margin-top: 60px;
+  background: #D3D3D3;
+}
+h3 {
+  color : #757575;
+  font-size: 1.3em;
+  min-height: 50px;
+}
+.wrap {
+  background: #fff;
+  padding: 40px;
+}
+
+form {
+  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin: auto;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.field textarea {
+  height: 200px;
+  color: #000;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: normal;
+
+}
+.txt_indent {
+  text-indent: 20px;
+}
+.field input {
+  width: 100%;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  margin-bottom: 15px;
+  color: #000;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+textarea:focus, input:focus {
+  border: 1px solid #09C;
+}
+.btn-form {
+  position: relative;
+  
+  background: #09C;
+  vertical-align: center;
+  color: #fff;
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 40px;
+  border-radius: 15px;
+  border: 1p solid #999;
+}
+.btn-form:hover {
+  background: #fff;
+  color: #09C;
+}
+.btn-default {
+  margin: 5px;
+}
+.btn-default:hover {
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.time {
+  float: right;
+  font-size: 0.8em;
+}
+.line {
+  border-bottom: 1px solid grey;
+}
+.button {
+  padding: 5px;
+}
+.navbar ul {
+  float:right;
+}
+.navbar ul li a:active {
+  color: green;
+}
+.navbar a:hover {
+  color: red;
+}
+.about h2{
+  margin-bottom: 45px;
+}
+.about img{
+  margin-bottom: 54px;
+}
+.about p {
+  font-size: 1.2em;
+  margin-bottom: 54px;
+}
+.contact {
+  padding-top: 80px;
+  margin-bottom: 110px;
+}
+.footer {
+  background-color: #333333;
+  color : #fff;
+  position: relative;
+  
+  line-height:60px; 
+  height: 80px;
+  clear: both;
+}
+.footer p {
+  margin-top: 10px;
+}
+.top_article {
+  margin: 0 auto;
+  padding: 40px; 
+}
+.top_article h3 {
+  font-size: 2em;
+  color: #000;
+}
+.top_article img {
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+

@@ -1,31 +1,29 @@
+<article class="container-fluid">
+<h1>Latest article</h1>
+  <div class="top_article">     
+    <%= render @articles.first(1) %>
+  </div>
+
+</article>
+<article class="container">
 <p id="notice"><%= notice %></p>
-
 <h1>Articles</h1>
+  <div class="container-fluid wrap">
+    <div class="row">
+      <% @articles.each do |article| %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Article body</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.article_body %></td>
-        <td><%= article.image_url %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+        <div class="col-sm-6 col-md-6">
+          <%= render article %>
+          <div class="button">
+              <%= link_to 'Edit', edit_article_path(article)  , class: "btn btn-default" %>
+              <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, 
+              class: "btn btn-default" %>
+          </div>
+          <hr class="line container-fluid">
+        </div>
+      <% end %>
+    </div>
+  </div>
 <br>
-
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'New Article', new_article_path  , class: "btn btn-default" %>
+</article>

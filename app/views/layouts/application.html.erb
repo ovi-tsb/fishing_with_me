@@ -2,13 +2,49 @@
 <html>
   <head>
     <title>FishingWithMe</title>
-    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <body data-spy="spyscroll" data-target=".navbar-default">
+      <nav class="navbar navbar-inverse navbar-fixed-top"><!--  Nav  -->
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a href="#index" class="navbar-brand">Fishing With Me</a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li class=<%= active_class(articles_path) %>><%= link_to 'Home', articles_path %></li>
+                  <li class=<%= active_class(static_pages_about_path) %>><%= link_to 'About', static_pages_about_path %></li>
+                  <li class=<%= active_class(static_pages_contact_path) %>><%= link_to 'Contact', static_pages_contact_path %></li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+          
+          <article class="container">
+            <%= yield %>
+          </article>
+          <footer class="footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-9 col-sm-8 col-xs-5">
+                  <p>&copy; Fishing With Me 2017 </p>
+                </div>
+              </div> 
+            </div>
+          </footer> 
+    </body>
 </html>
