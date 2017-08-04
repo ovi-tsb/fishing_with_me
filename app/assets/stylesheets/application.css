@@ -11,13 +11,10 @@ h3 {
 }
 .wrap {
   background: #fff;
-  padding: 40px;
+  padding: 20px 40px;
 }
 
 form {
-  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
   margin: auto;
   position: relative;
   width: 100%;
@@ -25,11 +22,9 @@ form {
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 14px;
   font-style: italic;
-  line-height: 24px;
-  font-weight: bold;
   color: #09C;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 20px;
   border: 1px solid #999;
   border: inset 1px solid #333;
@@ -44,7 +39,6 @@ form {
   font-style: italic;
   line-height: 24px;
   font-weight: normal;
-
 }
 .txt_indent {
   text-indent: 20px;
@@ -62,15 +56,15 @@ form {
 }
 textarea {
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: block;
+  resize: none;
 }
 textarea:focus, input:focus {
   border: 1px solid #09C;
 }
 .btn-form {
   position: relative;
-  
   background: #09C;
   vertical-align: center;
   color: #fff;
@@ -96,10 +90,9 @@ textarea:focus, input:focus {
   font-size: 0.8em;
 }
 .line {
-  border-bottom: 1px solid grey;
-}
-.button {
-  padding: 5px;
+  margin-top: -3px;
+  line-height: 2px;
+  border-bottom: 1px solid #606060;
 }
 .navbar ul {
   float:right;
@@ -127,18 +120,20 @@ textarea:focus, input:focus {
 .footer {
   background-color: #333333;
   color : #fff;
-  position: relative;
-  
-  line-height:60px; 
+  overflow: hidden; // no space on bottom
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  line-height:80px; 
   height: 80px;
-  clear: both;
+  
 }
 .footer p {
-  margin-top: 10px;
+  margin-left: 20px;
 }
 .top_article {
   margin: 0 auto;
-  padding: 40px; 
+  padding: 0px; 
 }
 .top_article h3 {
   font-size: 2em;
@@ -146,13 +141,80 @@ textarea:focus, input:focus {
 }
 .top_article img {
   margin: 0 auto;
+  width: 100%;
 }
+.like:hover {
+  text-decoration: none;
+}
+.title{
+  font-size: 1.9em;
+}
+.min-height {
+  min-height: 710px;
+  margin: 40px 0;
+  padding: 40px;
+}
+.name-show {
+  margin-bottom: 60px;
+  min-height: 500px;
+}
+.navbar-brand {
+  margin-left: 15px;
+}
+.product-reviews {
+  background-color: #efefef;
+  padding: 15px;
 
+}
+.product-reviews hr {
+  background-color: #aaaaaa;
+  height: 1px;
+}
+.glyphicon-remove {
+  color: red;
+  float: right;
+}
+.button {
+  min-height: 30px;
+}
+/* pagination ********************/
 
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
 
-
-
-
+/* pagination ********************/
+h3 a {
+  color: #750000;
+  
+}
+h3 a:hover {
+  text-decoration: none;
+}
 
 
 

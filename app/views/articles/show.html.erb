@@ -1,22 +1,46 @@
 <article class="container">
-  <p id="notice"><%= notice %></p>
+  
   <div class="wrap">
-    <h3>
-      <%= @article.title %>
+    <p>
+      Created by: <strong><%= @article.autor %></strong>
+      <i class="time">
+        <%= @article.created_at.strftime("%b %d, %Y") %>
+      </i>
+
+      <div class="caption" style="float: right; margin-bottom: 20px;">
+        <%= link_to like_article_path(@article), class: "like", remote: true, method: :put do %>
+          <button type="button" class="btn btn-info btn-sm"  aria-label="Left Align">
+            <span class="glyphicon glyphicon-thumbs-up  glyphicon-align-center" aria-hidden="true"></span>
+            <span class="badge"><%= @article.get_upvotes.size %>  </span>
+          </button>
+        <% end %>
+        <%= link_to unlike_article_path(@article), class: "like  ", remote: true, method: :put do %>
+          <button type="button" class="btn btn-danger btn-sm"  aria-label="Left Align">
+            <span class="glyphicon glyphicon-thumbs-down  glyphicon-align-center" aria-hidden="true"></span>
+            <span class="badge"><%= @article.get_downvotes.size  %></span>
+          </button>
+        <% end %>
+      </div>
+
+    </p>
+    <p>
+      <%= image_tag @article.photo.url %>
+    </p>
+    
+    <h3 class="title">
+      <%= @article.title%>
     </h3>
     <p>
-      By: <%= @article.autor %>
-    </p>
-    <p>
-      <%= image_tag(@article.image_url, class: "  img-responsive")%>
-    </p>
-    <p>
-      <strong>Article body:</strong>
       <%= simple_format @article.article_body, class: "txt_indent"%>
     </p>
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
 
+    <%= will_paginate @comments, inner_window: 1 %>
   </div>
-
-  <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-default" %>
-  <%= link_to 'Back', articles_path, class: "btn btn-default" %>
+  <% if (user_signed_in? && (current_user.id == @article.user_id)) %>
+    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-default" %>
+  <% end %>  
+    <%= link_to 'Back', articles_path, class: "btn btn-default" %>
+    
 </article>
