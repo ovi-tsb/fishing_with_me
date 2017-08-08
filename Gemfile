@@ -37,8 +37,8 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'acts_as_votable'
 gem 'will_paginate', '~> 3.1.0'
-gem 'paperclip'
-gem 'aws-sdk', '< 2.0'
+gem "paperclip", ">= 5.0"
+gem "aws-sdk", ">= 2.0"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
