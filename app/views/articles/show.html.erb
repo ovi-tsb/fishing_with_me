@@ -38,9 +38,14 @@
 
     <%= will_paginate @comments, inner_window: 1 %>
   </div>
-  <% if (user_signed_in? && (current_user.id == @article.user_id)) %>
-    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-default" %>
-  <% end %>  
+  <div class="button">
+    <% if (user_signed_in? || current_user.admin? && (current_user.id == @article.user_id)) %>
+      <%= link_to 'Edit', edit_article_path(@article)  , class: "btn btn-sm" %>
+                
+      <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, 
+                class: "btn btn-sm" %>
+    <% end %>
+  </div>
     <%= link_to 'Back', articles_path, class: "btn btn-default" %>
     
 </article>
