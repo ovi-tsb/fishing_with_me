@@ -18,6 +18,8 @@
     <%= f.text_field :title %>
   </div>
 
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
   <div class="field">
     <%= f.label :autor %>
     <%= f.text_field :autor %>

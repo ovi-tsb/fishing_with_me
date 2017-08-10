@@ -1,8 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
-  
+  before_action :authenticate_user!,except:[:index, :show]
+ 
   # GET /articles
   # GET /articles.json
+
+
   def index
     @articles = Article.all.order(created_at: :desc).paginate(:page => params[:page], per_page: 7)
   end
