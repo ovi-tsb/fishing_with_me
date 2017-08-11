@@ -220,6 +220,8 @@ h3 a {
 h3 a:hover {
   text-decoration: none;
 }
-
+.admin {
+  color: red;
+}
 
 

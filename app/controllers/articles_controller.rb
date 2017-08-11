@@ -30,6 +30,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
+    @article.autor = current_user.first_name
 
     respond_to do |format|
       if @article.save

@@ -12,7 +12,7 @@
         <div class="col-sm-6 col-md-6">
           <%= render article %>
           <div class="button">
-              <% if (user_signed_in? && (current_user.id == article.user_id)) %>
+              <% if (user_signed_in? && (current_user.id == article.user_id) || current_user.try(:admin?)) %>
                 <%= link_to 'Edit', edit_article_path(article)  , class: "btn btn-outline-secondary btn-sm" %>
               
               <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, 

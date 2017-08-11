@@ -38,7 +38,12 @@
                   <li class="user-login dropdown">
                     <% if user_signed_in? %>
                       <a class="dropdown-toggle capitalize-name" data-toggle="dropdown" href="#" aria-expanded="true">
-                         Welcome: <%= current_user.first_name %><span class="caret"></span></a>
+                        <% if current_user.try(:admin?) %>
+                        Welcome: <span class= "admin"><%= current_user.first_name  %></span>
+                        <% else %>  
+                         Welcome: <%= current_user.first_name %>
+                        <% end %>
+                         <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                               <li>
                                 <%= link_to 'Profile', user_path(current_user.id) %>
