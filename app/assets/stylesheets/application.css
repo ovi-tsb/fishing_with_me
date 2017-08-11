@@ -43,6 +43,11 @@ form {
 .txt_indent {
   text-indent: 20px;
 }
+.field span {
+  color: black;
+  font-weight: bold;
+  margin-left: 20px;
+}
 .field input {
   width: 100%;
   display: block;

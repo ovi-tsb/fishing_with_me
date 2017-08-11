@@ -14,17 +14,18 @@
   <% end %>
 <form action="">
   <div class="field">
+    <%= f.label :autor %> :
+    <span><%= current_user.first_name %></span> 
+  </div>
+
+  <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
 
     <%= f.hidden_field :user_id, value: current_user.id %>
 
-  <div class="field">
-    <%= f.label :autor %>
-    <%= f.text_field :autor %>
-  </div>
-
+  
   <div class="field">
     <%= f.label :article_body %>
     <%= f.text_area :article_body %>
