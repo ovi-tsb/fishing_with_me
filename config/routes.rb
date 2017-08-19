@@ -9,6 +9,8 @@ Rails.application.routes.draw do
  
   root 'articles#index'
 
+  post 'static_pages/thank_you'
+
   resources :articles do
     resources :comments
     member do

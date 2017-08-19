@@ -11,7 +11,8 @@
         <%= csrf_meta_tags %>
   </head>
 
-  <body data-spy="spyscroll" data-target=".navbar-default">
+  <body>
+    <div class="content">
       <nav class="navbar navbar-inverse navbar-fixed-top"><!--  Nav  -->
             <div class="container-fluid">
               <div class="navbar-header">
@@ -58,7 +59,7 @@
                 
               </div>
             </div>
-          </nav>
+      </nav>
           <% if notice %>  
             <p id="notice" class="alert alert-success" role="alert">
               <%= notice %>
@@ -72,10 +73,12 @@
           <article class="container">
             <%= yield %>
           </article>
+       </div>   
           <footer class="footer">
             
                   <p>&copy; Fishing With Me 2017 </p>
                 
           </footer> 
+          
     </body>
 </html>
