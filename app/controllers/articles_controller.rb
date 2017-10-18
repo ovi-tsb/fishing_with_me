@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @articles = Article.all.order(created_at: :desc).paginate(:page => params[:page], per_page: 7)
+      @articles = Article.all.order(created_at: :desc).paginate(:page => params[:page], per_page: 7)
   end
 
   # GET /articles/1
