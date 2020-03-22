@@ -9,7 +9,7 @@ end
 gem 'rails', '~> 5.0.2'
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'rspec-rails', '~> 3.6'
   gem "factory_girl_rails", "~> 4.0"
   gem 'simplecov', :require => false, :group => :test
