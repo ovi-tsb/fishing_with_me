@@ -31,7 +31,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'rails-controller-testing'
 gem "paperclip", ">= 5.0"
 gem "aws-sdk", ">= 2.0"
-
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 group :production do
   gem 'pg'
