@@ -16,7 +16,7 @@ group :development, :test do
   gem 'simplecov', :require => false, :group => :test
 end
 
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
